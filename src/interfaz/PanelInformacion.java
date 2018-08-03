@@ -28,6 +28,7 @@ public class PanelInformacion extends JPanel implements ActionListener{
 	private final static String COLOR = "COLOR";
 	
 	private InterfazMatematicas principal;
+	private JButton butGuardar;
 	
 	public PanelInformacion(InterfazMatematicas ventana){
 		principal = ventana;
@@ -41,6 +42,7 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		txtFilas = new JTextField(2);
 		txtCols  = new JTextField(2);
 		butGenerarMatriz = new JButton("Generar Matriz");
+		butGuardar = new JButton("Guardar");
 		
 		txtResultado = new JTextField(4);
 		txtResultado.setEditable(false);
@@ -50,8 +52,10 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		txtResultado.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		butGenerarMatriz.addActionListener(this);
+		butGuardar.addActionListener(this);
 		
 		butGenerarMatriz.setActionCommand(GENERAR_MATRIZ);
+		butGuardar.setActionCommand(GUARDAR);
 		
 		add(labFilas);
 		add(txtFilas);
@@ -60,6 +64,7 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		add(butGenerarMatriz);
 		add(labResultado);
 		add(txtResultado);
+		add(butGuardar);
 	}
 	
 	public int darFilas() throws NumberFormatException{

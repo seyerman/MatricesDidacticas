@@ -80,5 +80,8 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		if(comando.equals(GENERAR_MATRIZ)){
 			principal.generarMatriz();			
 		}
+		else if(comando.equals(GUARDAR)) {
+			principal.cargar();
+		}
 	}
 }

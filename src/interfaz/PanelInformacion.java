@@ -19,6 +19,7 @@ public class PanelInformacion extends JPanel implements ActionListener{
 	private JTextField txtFilas;
 	private JTextField txtCols;
 	private JButton butGenerarMatriz;
+	private JButton butCargar;
 	
 	private JTextField txtResultado;
 	
@@ -60,6 +61,12 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		add(butGenerarMatriz);
 		add(labResultado);
 		add(txtResultado);
+		
+		butCargar = new JButton("Cargar");
+		butCargar.addActionListener(this);
+		butCargar.setActionCommand(CARGAR);
+		add(butCargar);
+
 	}
 	
 	public int darFilas() throws NumberFormatException{

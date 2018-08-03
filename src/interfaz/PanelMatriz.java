@@ -14,21 +14,21 @@ public class PanelMatriz extends JPanel implements MouseListener{
 	public final static int TAMANO_LADO_CASILLA = 30;
 	private Casilla[][] matrizDidactica;
 	private InterfazMatematicas principal;
-	
+
 	public PanelMatriz(InterfazMatematicas ventana){
 		principal = ventana;
 		setBackground(Color.WHITE);
 		addMouseListener(this);
 		matrizDidactica = new Casilla[0][0];
 	}
-	
+
 	public void cambiarMatriz(Casilla[][] md){
 		matrizDidactica = md;
 	}
-	
+
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
-		
+
 		for (int i = 0; i < matrizDidactica.length; i++) {
 			for (int j = 0; j < matrizDidactica[i].length; j++) {
 				int x = j*TAMANO_LADO_CASILLA;
@@ -45,16 +45,16 @@ public class PanelMatriz extends JPanel implements MouseListener{
 			}
 		}
 	}
-	
-	public Color generarColorAleatorio() {
-		  int r = (int)(Math.random()*256);
-		  int g = (int)(Math.random()*256);
-		  int b = (int)(Math.random()*256);
-		  Color colorAleatorio = new Color(r,g,b);
-		  return colorAleatorio;
-		}
 
-	
+	public Color generarColorAleatorio() {
+		int r = (int)(Math.random()*256);
+		int g = (int)(Math.random()*256);
+		int b = (int)(Math.random()*256);
+		Color colorAleatorio = new Color(r,g,b);
+		return colorAleatorio;
+	}
+
+
 	public void cambiarFondo(Color nuevoColor) {
 	}
 

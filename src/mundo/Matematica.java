@@ -53,17 +53,16 @@ public class Matematica {
 	
 	public void guardar() throws IOException{
 		BufferedWriter bw=new BufferedWriter(new FileWriter(NOMBRE_ULTIMA_MATRIZ));
-	bw.write(matrizDidactica.length+""+matrizDidactica[0].length+"\n");
-	for (int i = 0; i < matrizDidactica.length; i++) {
-		for (int j = 0; j < matrizDidactica[i].length; j++) {
-			bw.write(matrizDidactica[i][j].darValor()+" ");
-			
-		}
-		bw.write("\n");
 		
-	}
-	bw.close();
-	
+	    bw.write(matrizDidactica.length+""+matrizDidactica[0].length+"\n");
+	    for (int i = 0; i < matrizDidactica.length; i++) {
+		    for (int j = 0; j < matrizDidactica[i].length; j++) {
+			     bw.write(matrizDidactica[i][j].darValor()+" ");
+		}
+	    bw.write("\n");
+	 }
+	  
+	    bw.close();	
 	}
 	
 	public void cargar(){

@@ -72,6 +72,7 @@ public class PanelMatriz extends JPanel implements MouseListener{
 
 	@Override
 	public void mouseExited(MouseEvent e) {
+		   cambiarFondo(Color.WHITE);
 	}
 
 	@Override

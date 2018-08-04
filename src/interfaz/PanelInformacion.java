@@ -19,6 +19,7 @@ public class PanelInformacion extends JPanel implements ActionListener{
 	private JTextField txtFilas;
 	private JTextField txtCols;
 	private JButton butGenerarMatriz;
+	private JButton butColor;
 	
 	private JTextField txtResultado;
 	
@@ -41,7 +42,8 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		txtFilas = new JTextField(2);
 		txtCols  = new JTextField(2);
 		butGenerarMatriz = new JButton("Generar Matriz");
-		
+		butColor = new JButton("Cambiar Color");
+	
 		txtResultado = new JTextField(4);
 		txtResultado.setEditable(false);
 		
@@ -53,6 +55,10 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		
 		butGenerarMatriz.setActionCommand(GENERAR_MATRIZ);
 		
+		butColor.addActionListener(this);	
+	
+		butColor.setActionCommand(COLOR);
+		
 		add(labFilas);
 		add(txtFilas);
 		add(labCols);
@@ -60,6 +66,7 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		add(butGenerarMatriz);
 		add(labResultado);
 		add(txtResultado);
+		add(butColor);
 	}
 	
 	public int darFilas() throws NumberFormatException{
